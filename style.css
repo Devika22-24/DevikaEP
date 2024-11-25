@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #717082;
+    background-color: #F3F3F7;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #A18AFF;
+    padding: 20px;
+    color: #fff;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.nav-btn:hover {
+    background: #CA8BFE;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.tasks-section, .scheduled-tasks-section, .settings-section {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Input Styling */
+.task-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-input button {
+    padding: 10px 20px;
+    background-color: #A18AFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #CA8BFE;
+}
+
+/* Task List Styling */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Task Item Styling */
+.task-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Task Items */
+.task-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Task Text */
+.task-list li span {
+    font-size: 1em;
+    color: #333;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Complete Button */
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.complete-btn i {
+    font-size: 1.2em;
+}
+
+/* Hover Effect for Complete Button */
+.complete-btn:hover {
+    background-color: #45A049;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #FF5252;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.delete-btn i {
+    font-size: 1.2em;
+}
+
+/* Hover Effect for Delete Button */
+.delete-btn:hover {
+    background-color: #FF3D3D;
+}
+
+/* Completed Task Styling */
+.task-list li.completed {
+    background-color: #E8F5E9;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    text-decoration: line-through;
+    transition: all 0.3s ease;
+}
+
+.task-list li.completed span {
+    color: #4CAF50;
+}
+
+/* Responsive Design for Tasks Section */
+@media (max-width: 768px) {
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .complete-btn, .delete-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Settings Section */
+.settings-section {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #F9F9FB;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-item i {
+    font-size: 1.5em;
+    color: #A18AFF;
+    margin-right: 10px;
+}
+
+.settings-item span {
+    flex: 1;
+    font-size: 1em;
+    color: #333;
+}
+
+.settings-item select,
+.settings-item input[type="checkbox"] {
+    margin-left: 10px;
+    padding: 5px;
+}
